@@ -68,6 +68,31 @@ int main(int argc, const char * argv[]) {
                 break;
         }
         
+        // While loops
+        // int i = 0;       already defined in line 26.
+        while (i<5) {
+            if (i == 3) {
+                NSLog(@"Aborting the while-loop");
+                break;
+            }
+            NSLog(@"Current year: %d", modelYear + i);
+            i++;
+        }
+        
+        // For loops
+        
+        for (int i=0; i<5; i++) {
+            if (i == 3) {
+                NSLog(@"Skipping a for-loop iteration");
+                continue;
+            }
+            NSLog(@"Current year: %d", modelYear + i);
+        }
+        
+        NSArray *models = @[@"Ford", @"Honda", @"Nissan", @"Porsche"];
+        for (id model in models) {
+            NSLog(@"%@", model);
+        }
         
     }
     return 0;
