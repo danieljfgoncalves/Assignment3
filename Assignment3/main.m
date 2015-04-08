@@ -13,6 +13,10 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"You've driven %.1f miles", odometer);        // 9200.8
         NSLog(@"You've driven %d miles", odometerAsInteger); // 9200
+        
+        double const pi = 3.14159;
+        pi = 42001.0;               // Compiler error
     }
     return 0;
 }
+
