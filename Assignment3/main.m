@@ -3,11 +3,12 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int years[4] = {1968, 1970, 1989, 1999};
-        years[0] = 1967;
-        for (int i=0; i<4; i++) {
-            NSLog(@"The year at index %d is: %d", i, years[i]);
-        }
+        int year = 1967;          // Define a normal variable
+        int *pointer;             // Declare a pointer that points to an int
+        pointer = &year;          // Find the memory address of the variable
+        NSLog(@"%d", *pointer);   // Dereference the address to get its value
+        *pointer = 1990;          // Assign a new value to the memory address
+        NSLog(@"%d", year);       // Access the value via the variable
     }
     return 0;
 }
